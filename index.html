@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Smolblog Design Book</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+	<h1>Smolblog Design Book</h1>
+
+	<h2>Quick Post</h2>
+
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+		Launch demo modal
+	</button>
+
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Quick Post</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-9">
+								<div class="mb-3">
+									<label for="exampleFormControlTextarea1" class="form-label sr-only">Post content</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1"
+										rows="3">I may be the worst pirate you've ever heard of... but you have heard of me.</textarea>
+								</div>
+								<div class="mb-3">
+									<label for="exampleFormControlInput1" class="form-label sr-only">Tags</label>
+									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tags">
+									<span class="badge text-bg-light">LOL</span>
+									<span class="badge text-bg-light">but for real tho</span>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<h4 class="h6">Send to</h4>
+
+								<div class="btn-group-vertical" role="group" aria-label="External channels to send this post to">
+									<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck1"><i class="bi bi-twitter"></i> @oddevan</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck2"><i class="bi bi-twitter"></i>
+										@_smolblog</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck3"><i class="bi bi-tiktok"></i>
+										@madcrasher</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck4"><i class="bi bi-youtube"></i> Evan
+										Hildreth</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck5"><i class="bi bi-mastodon"></i>
+										@evan@oddevan.com</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Post</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
