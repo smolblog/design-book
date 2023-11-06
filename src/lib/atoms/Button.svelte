@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let href: string|null = null;
 	export let variant: 'primary'|'danger'|'secondary' = 'secondary';
-	export let action: () => void|null = null;
+	export let action: (() => void)|null = null;
 
 	$: if (!href && !action) {
 		console.error('Button component requires a href or action prop');
