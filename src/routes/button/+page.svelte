@@ -20,4 +20,10 @@
 	<p>Other actions or links that are less likely to be used.</p>
 
 	<p><Button href="#">Maybe</Button> <Button action={() => {}}>Refresh</Button></p>
+
+	<h2>Danger</h2>
+
+	<p>Button that performs a destructive action.</p>
+
+	<p><Button href="#" variant="danger">Go Away</Button> <Button action={() => {}} variant="danger">Delete</Button></p>
 </div>
