@@ -9,51 +9,66 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  line-height: 1.5;
+	min-height: 100vh;
+	line-height: 1.5;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
 }
 
 /* Baseline for default links */
 a:not([class]) {
-  /* Relatively sized thickness and offset */
-  text-decoration-thickness: max(0.08em, 1px);
-  text-underline-offset: 0.15em;
+	/* Relatively sized thickness and offset */
+	text-decoration-thickness: max(0.08em, 1px);
+	text-underline-offset: 0.15em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -61,17 +76,17 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+	font: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-  min-height: 10em;
+	min-height: 10em;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-  scroll-margin-block: 2rem;
+	scroll-margin-block: 2rem;
 }
 
 /* Scroll padding allowance below focused elements to ensure they are clearly in view */
@@ -81,6 +96,6 @@ textarea:not([rows]) {
 
 /* Make a good focus outline */
 :focus-visible {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
+	outline: max(2px, 0.15em) solid currentColor;
+	outline-offset: max(2px, 0.15em);
 }

@@ -1,0 +1,99 @@
+body {
+	font-family: sans-serif;
+	accent-color: var(--color-primary);
+	color-scheme: var(--color-scheme);
+}
+
+a {
+	color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 1em;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 2rem auto;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 { font-size: 1.7rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+p {
+	margin: 1rem auto;
+	line-height: 1.5;
+}
+
+blockquote {
+	margin-inline-start: calc(1em - .5rem);
+	border-inline-start: .5rem solid var(--color-primary);
+	padding-inline-start: 1em;
+	
+	& cite {
+		display: block;
+		text-align: end;
+		
+		&::before {
+			content: "—";
+			margin-inline-end: .25em;
+		}
+	}
+}
+
+dl {
+	& dt {
+		margin-block-start: 1em;
+		font-weight: bold;
+		
+		&:after {
+			content: ":";
+		}
+	}
+	
+	& dd {
+		margin-inline-start: 2em;
+		margin-block-end: 1em;
+	}
+}
+
+details {
+	padding: 1em;
+	
+	& summary {
+		border: 1px solid var(--color-secondary);
+		margin-block-start: -1em;
+		margin-inline-start: -1em;
+		margin-inline-end: -1em;
+		padding: .75em;
+	}
+	
+	& *:last-child {
+		margin-block-end: 0;
+	}
+	
+	&[open] {
+		border: 1px solid var(--color-secondary);
+		
+		& summary {
+			border: none;
+			border-block-end: 1px solid var(--color-secondary);
+			background: var(--color-secondary-background);
+		}
+	}
+}
+
+del {
+	color: #666;
+}
+
+mark {
+	background-color: var(--color-primary-background);
+}

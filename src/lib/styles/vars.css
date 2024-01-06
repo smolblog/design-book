@@ -1,0 +1,20 @@
+:root {
+	--boop: #191b20;
+	--step: #e9e3db;
+	--snek: #9cd398;
+
+	--snek-h: 116;
+	--snek-s: 28%;
+	--snek-l: 83%;
+
+	--color-scheme: light;
+
+	--color-primary: #46783f;
+	--color-primary-background: #b7dfb3;
+	--color-secondary: #333;
+	--color-secondary-background: #ccc;
+	--color-danger: #7c3c3c;
+	--color-danger-background: #d7acac;
+	--color-foreground: #191b20;
+	--color-background: #f4f5f6;
+}
