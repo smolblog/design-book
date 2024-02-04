@@ -1,11 +1,11 @@
 body {
 	font-family: sans-serif;
-	accent-color: var(--color-primary);
+	accent-color: var(--primary-content);
 	color-scheme: var(--color-scheme);
 }
 
 a {
-	color: var(--color-primary);
+	color: var(--primary-content);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,7 +34,7 @@ p {
 
 blockquote {
 	margin-inline-start: calc(1em - .5rem);
-	border-inline-start: .5rem solid var(--color-primary);
+	border-inline-start: .5rem solid var(--primary-content);
 	padding-inline-start: 1em;
 	
 	& cite {
@@ -68,7 +68,7 @@ details {
 	padding: 1em;
 	
 	& summary {
-		border: 1px solid var(--color-secondary);
+		border: 1px solid var(--neutral-content);
 		margin-block-start: -1em;
 		margin-inline-start: -1em;
 		margin-inline-end: -1em;
@@ -80,12 +80,12 @@ details {
 	}
 	
 	&[open] {
-		border: 1px solid var(--color-secondary);
+		border: 1px solid var(--neutral-content);
 		
 		& summary {
 			border: none;
-			border-block-end: 1px solid var(--color-secondary);
-			background: var(--color-secondary-background);
+			border-block-end: 1px solid var(--neutral-content);
+			background: var(--neutral-shading);
 		}
 	}
 }
@@ -95,5 +95,5 @@ del {
 }
 
 mark {
-	background-color: var(--color-primary-background);
+	background-color: var(--primary-shading);
 }

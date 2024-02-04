@@ -3,18 +3,70 @@
 	--step: #e9e3db;
 	--snek: #9cd398;
 
-	--snek-h: 116;
-	--snek-s: 28%;
-	--snek-l: 83%;
+	--body-content-light: #000000;
+	--body-shading-light: #ffffff;
+	--neutral-content-light: #6e6f73;
+	--neutral-shading-light: #e8e8e9;
+	--primary-content-light: #5a7757;
+	--primary-shading-light: #d9eed6;
+	--secondary-content-light: #7d6e4f;
+	--secondary-shading-light: #ede7e0;
+	--danger-content-light: #b84d43;
+	--danger-shading-light: #fde2e0;
+
+	--body-content-dark: #ffffff;
+	--body-shading-dark: #9cd398;
+	--neutral-content-dark: #c5c5c7;
+	--neutral-shading-dark: #3c3e42;
+	--primary-content-dark: #9dd399;
+	--primary-shading-dark: #334132;
+	--secondary-content-dark: #d1c4b2;
+	--secondary-shading-dark: #443d2e;
+	--danger-content-dark: #f7b5b2;
+	--danger-shading-dark: #632d2d;
+
+	/* Optional auto-generated variables */
+
+	--neutral-gradient-light: linear-gradient(var(--neutral-content-light), var(--neutral-shading-dark));
+	--primary-gradient-light: linear-gradient(var(--primary-content-light), var(--primary-shading-dark));
+	--secondary-gradient-light: linear-gradient(var(--secondary-content-light), var(--secondary-shading-dark));
+	--danger-gradient-light: linear-gradient(var(--danger-content-light), var(--danger-shading-dark));
+	--neutral-gradient-dark: linear-gradient(var(--neutral-shading-light), var(--neutral-content-dark));
+	--primary-gradient-dark: linear-gradient(var(--primary-shading-light), var(--primary-content-dark));
+	--secondary-gradient-dark: linear-gradient(var(--secondary-shading-light), var(--secondary-content-dark));
+	--danger-gradient-dark: linear-gradient(var(--danger-shading-light), var(--danger-content-dark));
+
+	/* Set mode-agnostic variables */
 
 	--color-scheme: light;
+	--body-content: var(--body-content-light);
+	--body-shading: var(--body-shading-light);
+	--neutral-content: var(--neutral-content-light);
+	--neutral-shading: var(--neutral-shading-light);
+	--primary-content: var(--primary-content-light);
+	--primary-shading: var(--primary-shading-light);
+	--secondary-content: var(--secondary-content-light);
+	--secondary-shading: var(--secondary-shading-light);
+	--danger-content: var(--danger-content-light);
+	--danger-shading: var(--danger-shading-light);
+}
 
-	--color-primary: #46783f;
-	--color-primary-background: #b7dfb3;
-	--color-secondary: #333;
-	--color-secondary-background: #ccc;
-	--color-danger: #7c3c3c;
-	--color-danger-background: #d7acac;
-	--color-foreground: #191b20;
-	--color-background: #f4f5f6;
+/* Set mode-agnostic variables for dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Set mode-agnostic variables */
+
+		--color-scheme: light;
+		--body-content: var(--body-content-dark);
+		--body-shading: var(--body-shading-dark);
+		--neutral-content: var(--neutral-content-dark);
+		--neutral-shading: var(--neutral-shading-dark);
+		--primary-content: var(--primary-content-dark);
+		--primary-shading: var(--primary-shading-dark);
+		--secondary-content: var(--secondary-content-dark);
+		--secondary-shading: var(--secondary-shading-dark);
+		--danger-content: var(--danger-content-dark);
+		--danger-shading: var(--danger-shading-dark);
+  }
 }
