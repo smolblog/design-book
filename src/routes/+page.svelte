@@ -11,3 +11,5 @@
 <p>Have a button!</p>
 
 <Button>I'm a button!</Button>
+
+<p><a href="/colors">Colors</a></p>

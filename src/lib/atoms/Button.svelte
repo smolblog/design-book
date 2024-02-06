@@ -1,37 +1,40 @@
 <script lang="ts">
-	import type { SemanticColor } from "$lib/types.js";
+	import type { ColorMode, SemanticColor } from "$lib/types.js";
 
 	export let type: 'submit'|'reset'|null = null;
 	export let theme: SemanticColor|null = null;
+	export let mode: ColorMode|null = null;
 	export let disabled = false;
+
+	let modeClass = (mode == 'light') ? 'light-mode' : 'dark-mode';
 </script>
 
 <style>
 	button {
 		font-size: 1rem;
-		border-radius: .5em;
+		border-radius: var(--border-radius);
 		border: 0;
 		padding: .5em 1em;
 		display: inline-block;
-		background: var(--neutral-gradient-light);
+		background: var(--neutral-gradient);
 		font-weight: bold;
-		color: var(--body-content-dark);
-		box-shadow: 0 .25rem .25rem .125rem rgba(0, 0, 0, 0.2);
+		color: var(--body-content);
+		box-shadow: var(--shadow-base);
 
 		&:active {
-			box-shadow: 0 .125rem .125rem .0625rem rgba(0, 0, 0, 0.2);
+			box-shadow: var(--shadow-half);
 		}
 		
 		&.primary {
-			background: var(--primary-gradient-light);
+			background: var(--primary-gradient);
 		}
 		
 		&.secondary {
-			background: var(--secondary-gradient-light);
+			background: var(--secondary-gradient);
 		}
 		
 		&.danger {
-			background: var(--danger-gradient-light);
+			background: var(--danger-gradient);
 		}
 		
 		&[disabled] {
@@ -40,6 +43,6 @@
 	}
 </style>
 
-<button {type} class={theme} {disabled}>
+<button {type} class={`${theme} ${modeClass}`} {disabled}>
 	<slot/>
 </button>

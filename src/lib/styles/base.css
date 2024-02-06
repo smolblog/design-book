@@ -1,7 +1,9 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Poppins', sans-serif;
 	accent-color: var(--primary-content);
 	color-scheme: var(--color-scheme);
+	background: var(--body-shading);
+	color: var(--body-content);
 }
 
 a {
@@ -91,9 +93,14 @@ details {
 }
 
 del {
-	color: #666;
+	color: var(--neutral-content);
 }
 
 mark {
 	background-color: var(--primary-shading);
+}
+
+.light-mode, .dark-mode {
+	background-color: var(--body-shading);
+	color: var(--body-content);
 }

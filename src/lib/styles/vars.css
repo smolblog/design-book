@@ -1,7 +1,20 @@
 :root {
+	/* Brand colors. Remember: no step on snek! */
 	--boop: #191b20;
 	--step: #e9e3db;
 	--snek: #9cd398;
+
+	/*
+		Color palatte from:
+		https://accessiblepalette.com/?lightness=99,92,84,79.7,67.65,55,47,40.4,26,11&db595c=1,0&9e8461=1,12&9cd398=1,0&191b20=1,0
+
+		100 row: x-shading-light
+		300 row: x-content-dark
+		600 row: x-content-light
+		800 row: x-shading-dark
+	 */
+
+	/* Light mode standard colors */
 
 	--body-content-light: #000000;
 	--body-shading-light: #ffffff;
@@ -14,8 +27,10 @@
 	--danger-content-light: #b84d43;
 	--danger-shading-light: #fde2e0;
 
+	/* Dark mode standard colors */
+
 	--body-content-dark: #ffffff;
-	--body-shading-dark: #9cd398;
+	--body-shading-dark: #191b20;
 	--neutral-content-dark: #c5c5c7;
 	--neutral-shading-dark: #3c3e42;
 	--primary-content-dark: #9dd399;
@@ -25,16 +40,22 @@
 	--danger-content-dark: #f7b5b2;
 	--danger-shading-dark: #632d2d;
 
-	/* Optional auto-generated variables */
+	/* Standard options */
 
-	--neutral-gradient-light: linear-gradient(var(--neutral-content-light), var(--neutral-shading-dark));
-	--primary-gradient-light: linear-gradient(var(--primary-content-light), var(--primary-shading-dark));
-	--secondary-gradient-light: linear-gradient(var(--secondary-content-light), var(--secondary-shading-dark));
-	--danger-gradient-light: linear-gradient(var(--danger-content-light), var(--danger-shading-dark));
-	--neutral-gradient-dark: linear-gradient(var(--neutral-shading-light), var(--neutral-content-dark));
-	--primary-gradient-dark: linear-gradient(var(--primary-shading-light), var(--primary-content-dark));
-	--secondary-gradient-dark: linear-gradient(var(--secondary-shading-light), var(--secondary-content-dark));
-	--danger-gradient-dark: linear-gradient(var(--danger-shading-light), var(--danger-content-dark));
+	--border-radius: 0.5em;
+	--shadow-half: 0 .125rem .125rem .0625rem rgba(0, 0, 0, 0.2);
+	--shadow-base: 0 .25rem .25rem .125rem rgba(0, 0, 0, 0.2);
+
+	/* Generated gradients */
+
+	--neutral-gradient-light: linear-gradient(var(--neutral-shading-light), var(--neutral-content-dark));
+	--primary-gradient-light: linear-gradient(var(--primary-shading-light), var(--primary-content-dark));
+	--secondary-gradient-light: linear-gradient(var(--secondary-shading-light), var(--secondary-content-dark));
+	--danger-gradient-light: linear-gradient(var(--danger-shading-light), var(--danger-content-dark));
+	--neutral-gradient-dark: linear-gradient(var(--neutral-content-light), var(--neutral-shading-dark));
+	--primary-gradient-dark: linear-gradient(var(--primary-content-light), var(--primary-shading-dark));
+	--secondary-gradient-dark: linear-gradient(var(--secondary-content-light), var(--secondary-shading-dark));
+	--danger-gradient-dark: linear-gradient(var(--danger-content-light), var(--danger-shading-dark));
 
 	/* Set mode-agnostic variables */
 
@@ -49,15 +70,18 @@
 	--secondary-shading: var(--secondary-shading-light);
 	--danger-content: var(--danger-content-light);
 	--danger-shading: var(--danger-shading-light);
+
+	--neutral-gradient: var(--neutral-gradient-light);
+	--primary-gradient: var(--primary-gradient-light);
+	--secondary-gradient: var(--secondary-gradient-light);
+	--danger-gradient: var(--danger-gradient-light);
 }
 
-/* Set mode-agnostic variables for dark mode */
+/* Set mode-agnostic variables for dark mode and override classes */
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Set mode-agnostic variables */
-
-		--color-scheme: light;
+		--color-scheme: dark;
 		--body-content: var(--body-content-dark);
 		--body-shading: var(--body-shading-dark);
 		--neutral-content: var(--neutral-content-dark);
@@ -68,5 +92,48 @@
 		--secondary-shading: var(--secondary-shading-dark);
 		--danger-content: var(--danger-content-dark);
 		--danger-shading: var(--danger-shading-dark);
+
+		--neutral-gradient: var(--neutral-gradient-dark);
+		--primary-gradient: var(--primary-gradient-dark);
+		--secondary-gradient: var(--secondary-gradient-dark);
+		--danger-gradient: var(--danger-gradient-dark);
   }
+}
+
+.light-mode {
+	--color-scheme: light;
+	--body-content: var(--body-content-light);
+	--body-shading: var(--body-shading-light);
+	--neutral-content: var(--neutral-content-light);
+	--neutral-shading: var(--neutral-shading-light);
+	--primary-content: var(--primary-content-light);
+	--primary-shading: var(--primary-shading-light);
+	--secondary-content: var(--secondary-content-light);
+	--secondary-shading: var(--secondary-shading-light);
+	--danger-content: var(--danger-content-light);
+	--danger-shading: var(--danger-shading-light);
+
+	--neutral-gradient: var(--neutral-gradient-light);
+	--primary-gradient: var(--primary-gradient-light);
+	--secondary-gradient: var(--secondary-gradient-light);
+	--danger-gradient: var(--danger-gradient-light);
+}
+
+.dark-mode {
+	--color-scheme: dark;
+	--body-content: var(--body-content-dark);
+	--body-shading: var(--body-shading-dark);
+	--neutral-content: var(--neutral-content-dark);
+	--neutral-shading: var(--neutral-shading-dark);
+	--primary-content: var(--primary-content-dark);
+	--primary-shading: var(--primary-shading-dark);
+	--secondary-content: var(--secondary-content-dark);
+	--secondary-shading: var(--secondary-shading-dark);
+	--danger-content: var(--danger-content-dark);
+	--danger-shading: var(--danger-shading-dark);
+
+	--neutral-gradient: var(--neutral-gradient-dark);
+	--primary-gradient: var(--primary-gradient-dark);
+	--secondary-gradient: var(--secondary-gradient-dark);
+	--danger-gradient: var(--danger-gradient-dark);
 }
