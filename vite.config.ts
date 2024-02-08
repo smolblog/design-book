@@ -1,7 +1,5 @@
-import browserslist from 'browserslist';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
-import { browserslistToTargets } from 'lightningcss';
 
 export default defineConfig({
 	plugins: [sveltekit()],
@@ -15,6 +13,6 @@ export default defineConfig({
     // }
   },
   build: {
-    cssMinify: 'lightningcss'
+    // cssMinify: 'lightningcss'
   }
 });
