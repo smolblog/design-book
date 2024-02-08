@@ -12,7 +12,8 @@
 		border-radius: var(--border-radius);
 		box-shadow: var(--shadow-base);
 		background: var(--body-shading);
-		padding: 1em;
+		padding: var(--gutter);
+		margin: var(--gutter);
 
 		&.primary { background: var(--primary-shading); }
 		&.secondary { background: var(--secondary-shading); }

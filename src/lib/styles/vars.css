@@ -45,6 +45,7 @@
 	--border-radius: 0.5em;
 	--shadow-half: 0 .125rem .125rem .0625rem rgba(0, 0, 0, 0.2);
 	--shadow-base: 0 .25rem .25rem .125rem rgba(0, 0, 0, 0.2);
+	--gutter: 0.625rem;
 
 	/* Generated gradients */
 
