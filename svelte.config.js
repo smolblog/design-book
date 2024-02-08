@@ -15,7 +15,7 @@ const config = {
 	},
 
 	compilerOptions: {
-		cssHash: ({ filename }) => `sb-${filename}`,
+		cssHash: ({ name }) => `sb-${name}`,
 	}
 };
 
