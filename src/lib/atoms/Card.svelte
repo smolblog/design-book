@@ -1,8 +1,14 @@
 <script lang="ts">
 	import type { ColorMode, SemanticColor } from "$lib/types.js";
+	import type { Snippet } from "svelte";
 
-	export let theme: SemanticColor|null = null;
-	export let mode: ColorMode|null = null;
+	interface CardProps {
+		theme?: SemanticColor
+		mode?: ColorMode
+		children: Snippet
+	};
+
+	let { theme, mode, children } = $props<CardProps>();
 
 	let modeClass = mode ? `${mode}-mode` : '';
 </script>
@@ -23,5 +29,5 @@
 </style>
 
 <div class={`${theme} ${modeClass}`}>
-	<slot/>
+	{@render children()}
 </div>

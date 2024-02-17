@@ -1,6 +1,5 @@
 <script>
 	import Card from "$lib/atoms/Card.svelte";
-
 </script>
 <style>
 	div.colorDemo {

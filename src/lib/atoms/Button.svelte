@@ -1,10 +1,16 @@
 <script lang="ts">
 	import type { ColorMode, SemanticColor } from "$lib/types.js";
+	import type { Snippet } from "svelte";
 
-	export let type: 'submit'|'reset'|null = null;
-	export let theme: SemanticColor|null = null;
-	export let mode: ColorMode|null = null;
-	export let disabled = false;
+	interface ButtonProps {
+		type?: 'submit'|'reset'
+		theme?: SemanticColor
+		mode?: ColorMode
+		disabled?: boolean
+		children: Snippet
+	};
+
+	let { type, theme, mode, disabled = false, children } = $props<ButtonProps>();
 
 	let modeClass = (mode == 'light') ? 'light-mode' : 'dark-mode';
 </script>
@@ -44,5 +50,5 @@
 </style>
 
 <button {type} class={`${theme} ${modeClass}`} {disabled}>
-	<slot/>
+	{@render children()}
 </button>
